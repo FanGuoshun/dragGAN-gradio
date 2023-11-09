@@ -433,8 +433,8 @@ with gr.Blocks() as app:
     def change_language(lang):
         if lang == '中文':
             lang = gr.Button(value='English')
-            quick_start_markdown = gr.Markdown(value=quick_start_cn)
-            advanced_usage_markdown = gr.Markdown(value=advanced_usage_cn)
+            quick_start_markdown = gr.update(value=quick_start_cn)
+            advanced_usage_markdown = gr.update(value=advanced_usage_cn)
             form_pretrained_dropdown = gr.Dropdown(label="预训练模型")
             form_seed_number = gr.Number(label="种子")
             form_lr_number = gr.Number(label="步长值")
@@ -448,8 +448,8 @@ with gr.Blocks() as app:
 
         elif lang == 'English':
             lang = gr.Button(value='中文')
-            quick_start_markdown = gr.Markdown(value=quick_start_en)
-            advanced_usage_markdown = gr.Markdown(value=advanced_usage_en)
+            quick_start_markdown = gr.update(value=quick_start_en)
+            advanced_usage_markdown = gr.update(value=advanced_usage_en)
             form_pretrained_dropdown = gr.Dropdown(label="Pretrained Model")
             form_seed_number = gr.Number(label="Seed")
             form_lr_number = gr.Number(label="Step Size")
